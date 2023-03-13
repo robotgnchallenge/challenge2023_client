@@ -15,6 +15,9 @@ In 2023, we host the Mobile Robot Grasping and Navigation Challenge that evaluat
   make 
 ```
 
+### Task Server
+Please follow https://robomani-challenge.bytedance.com/tutorial to install task server.
+
 ##### Troubleshooting
 ```shell
 #ERROR1: /usr/bin/ld: cannot find -l*
@@ -29,7 +32,7 @@ sudo ln -s /lib/x86_64-linux-gnu/libuuid.so.1 ${path}/anaconda3/envs/${your_env}
 ### Build Enviroment
 ```shell
 cd ~
-https://github.com/robotgnchallenge/challenge2023_client.git
+git clone https://github.com/robotgnchallenge/challenge2023_client.git
 mv challenge2023_client client_ws
 conda activate robotmani
 cd ~/client_ws/src/task_client/scripts/graspnetAPI

@@ -6,6 +6,7 @@ In 2023, we host the Mobile Robot Grasping and Navigation Challenge that evaluat
 ## Requirements
 ### pybind11
 ```shell
+  cd ~/tools
   git clone https://github.com/pybind/pybind11.git
   cd pybind11/
   mkdir build

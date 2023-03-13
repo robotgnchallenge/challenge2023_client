@@ -1,0 +1,15 @@
+# Goal
+# point value
+int32 obj_id
+
+---
+# Result 
+bool result
+
+---
+# Feedback
+# cur_4 : current rad of joint_4
+# cur_5 : current rad of jiont_5
+float32 cur_4
+float32 cur_5
+

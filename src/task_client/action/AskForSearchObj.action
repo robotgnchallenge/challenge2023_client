@@ -1,0 +1,10 @@
+# Goal
+int64 obj_id 
+
+---
+# Result
+bool result
+
+---
+# Feedback
+geometry_msgs/PoseStamped temp_goal

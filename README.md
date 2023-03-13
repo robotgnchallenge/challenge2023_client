@@ -21,12 +21,12 @@ Please follow https://robomani-challenge.bytedance.com/tutorial to install task 
 
 ##### Troubleshooting
 ```shell
-#ERROR1: /usr/bin/ld: cannot find -l*
-sudo ln -s ${path}/pybind11/build/tests/pybind11_cross_module_tests.cpython-38-x86_64-linux-gnu.so /usr/local/lib/libpybind11_cross_module_tests.cpython-38-x86_64-linux-gnu.so
-sudo ln -s ${path}/pybind11/build/tests/pybind11_tests.cpython-38-x86_64-linux-gnu.so /usr/local/lib/libpybind11_tests.cpython-38-x86_64-linux-gnu.so
+# ERROR1: /usr/bin/ld: cannot find -l*
+sudo ln -s ${pybind11_path}/pybind11/build/tests/pybind11_cross_module_tests.cpython-${python_version}-x86_64-linux-gnu.so /usr/local/lib/libpybind11_cross_module_tests.cpython-${python_version}-x86_64-linux-gnu.so
+sudo ln -s ${pybind11_path}/pybind11/build/tests/pybind11_tests.cpython-${python_version}-x86_64-linux-gnu.so /usr/local/lib/libpybind11_tests.cpython-${python_version}-x86_64-linux-gnu.so
 
 # ERROR2: usr/lib/x86_64-linux-gnu/libapr-1.so.0：对‘uuid_generate@UUID_1.0’未定义的引用
-sudo rm ${path}/anaconda3/envs/<yourenv>/lib/libuuid.so.1
+sudo rm ${path}/anaconda3/envs/${your_env}/lib/libuuid.so.1
 sudo ln -s /lib/x86_64-linux-gnu/libuuid.so.1 ${path}/anaconda3/envs/${your_env}/lib/libuuid.so.1
 ```
 

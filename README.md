@@ -16,9 +16,6 @@ In 2023, we host the Mobile Robot Grasping and Navigation Challenge that evaluat
   make 
 ```
 
-### Task Server
-Please follow https://robomani-challenge.bytedance.com/tutorial to install task server.
-
 ##### Troubleshooting
 ```shell
 # ERROR1: /usr/bin/ld: cannot find -l*
@@ -40,8 +37,16 @@ cd ~/client_ws/src/task_client/scripts/graspnetAPI
 pip install .
 
 cd ~/client_ws
+vim ~/client_ws/src/task_client/CMakeLists.txt
+# Please Comment out lines from 117 to 131
+catkin build
+vim ~/client_ws/src/task_client/CMakeLists.txt
+# Uncomment lines from 117 to 131
 catkin build
 ```
+
+### Task Server
+Please follow https://robomani-challenge.bytedance.com/tutorial to install task server.
 
 ### Demo
 ##### Run Server

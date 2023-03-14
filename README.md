@@ -3,6 +3,9 @@
 ## Introduction
 In 2023, we host the Mobile Robot Grasping and Navigation Challenge that evaluates the robot's ability of scene understanding, navigation and grasping in the household scenario. The robot needs to explore a random environment, find a specific object and provide a stable grasp. CCF TCIR as the organizing committee launched the challenge. In this challenge, the organizer provides a downloadable simulator and an online evaluation system. Participants can develop their own scene understanding, navigation and grasping algorithms to complete the tasks. For more details, see https://robomani-challenge.bytedance.com/.
 
+## Notice
+* Submission docker should run in an isolated ROS master. The ROS MASTER PORT will change in evaluation, do not trying to access the server ROS master, please access data and control robot via socket message.
+
 ## Requirements
 ### pybind11
 ```shell
@@ -110,7 +113,8 @@ Please refer to https://blog.csdn.net/weixin_39379635/article/details/129159713
 Please configure CUDA, cuDNN, and tensorflow-gpu environments that match your NVIDIA GPU.
 
 # ERROR3: ROS_MASTER_URI port [10241] does not match this roscore [11311]
-# [IMPORTANT] Only for debugging and development, your submission docker should run in an isolated ROS master
+# [IMPORTANT] Only for debugging and development, your submission docker should run in an isolated ROS master. 
+# The ROS MASTER PORT will change in evaluation, do not trying to access the server ROS master, please access data and control robot via socket message.
 export ROS_MASTER_URI=http://127.0.0.1:10241
 
 ```

@@ -16,6 +16,12 @@ In 2023, we host the Mobile Robot Grasping and Navigation Challenge that evaluat
   make 
 ```
 
+### CUDA & cuDNN
+* CUDA 11.1
+* cuDNN 8.7.0
+
+
+
 ##### Troubleshooting
 ```shell
 # ERROR1: /usr/bin/ld: cannot find -l*
@@ -93,6 +99,20 @@ source devel/setup.bash
 cd src/task_client/demo/src
 conda activate robotmani
 python task_client_demo.py
+```
+
+##### Troubleshooting
+```shell
+# ERROR1: version `GLIBCXX_3.4.29' not found
+Please refer to https://blog.csdn.net/weixin_39379635/article/details/129159713
+
+# ERROR2: Grasp Detection failed
+Please configure CUDA, cuDNN, and tensorflow-gpu environments that match your NVIDIA GPU.
+
+# ERROR3: ROS_MASTER_URI port [10241] does not match this roscore [11311]
+# [IMPORTANT] Only for debugging and development, your submission docker should run in an isolated ROS master
+export ROS_MASTER_URI=http://127.0.0.1:10241
+
 ```
 
 

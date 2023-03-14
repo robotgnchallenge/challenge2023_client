@@ -27,7 +27,7 @@ sudo rm ${path}/anaconda3/envs/${your_env}/lib/libuuid.so.1
 sudo ln -s /lib/x86_64-linux-gnu/libuuid.so.1 ${path}/anaconda3/envs/${your_env}/lib/libuuid.so.1
 ```
 
-### Build Enviroment
+### Build Environment
 ```shell
 cd ~
 git clone https://github.com/robotgnchallenge/challenge2023_client.git

@@ -45,6 +45,22 @@ vim ~/client_ws/src/task_client/CMakeLists.txt
 catkin build
 ```
 
+##### Troubleshooting
+```shell
+# If error occurs, please check ~/client_ws/src/task_client/CMakeLists.txt first, make sure enviroment path are correct in line 117 to 131
+
+# ERROR1: Python.h: No such file or directory
+vim ~/client_ws/src/task_client/CMakeLists.txt
+# Modify line 117, 118, 120, 129 to match your anaconda path
+
+# ERROR2: pybind11/* : No such file or directory
+vim ~/client_ws/src/task_client/CMakeLists.txt
+# Modfy line 119, 121, 122 to match your pybind11 path
+
+# ERROR2: pcl/* : No such file or directory
+sudo apt install libpcl-dev
+```
+
 ### Task Server
 Please follow https://robomani-challenge.bytedance.com/tutorial to install task server.
 

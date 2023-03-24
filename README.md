@@ -138,7 +138,18 @@ rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/diff_drive_contr
 cd ~/client_ws/src/task_client/demo/src
 python task_client_example.py
 ```
-After the robot arm finish going to the initial pose in Terminal 3, return to Terminal 2 and use keyboard to control the robot. Data will be save in ~/client_ws/src/task_client/demo
+After the robot arm finish going to the initial pose in Terminal 3, return to Terminal 2 and use the keyboard to control the robot. Data will be saved in ~/client_ws/src/task_client/demo/sim_data
+
+#### Data Visualization
+```shell
+cd ~/client_ws/src/task_client/demo/src
+python data_visualizer.py ../sim_data/${npy_file}
+```
+The visualize result will be saved in ~/client_ws/src/task_client/demo/sim_data as png file.
+
+
+
+
 
 
 

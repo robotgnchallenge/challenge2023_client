@@ -119,6 +119,27 @@ export ROS_MASTER_URI=http://127.0.0.1:10241
 
 ```
 
+### Data Collection
+```shell
+# In this step, we assume the task server is already build
+# Terminal 1
+cd ~/server_ws/src/webots_ros
+./server_run.sh
+```
+
+```shell
+# Terminal 2
+# If teleop_twist_keyboard does not exist, please install by 'sudo apt-get install ros-noetic-teleop-twist-keyboard'
+rosrun teleop_twist_keyboard teleop_twist_keyboard.py cmd_vel:=/diff_drive_controller/cmd_vel
+```
+
+```shell
+# Terminal 3
+cd ~/client_ws/src/task_client/demo/src
+python task_client_example.py
+```
+After the robot arm finish going to the initial pose in Terminal 3, return to Terminal 2 and use keyboard to control the robot. Data will be save in ~/client_ws/src/task_client/demo
+
 
 
 
